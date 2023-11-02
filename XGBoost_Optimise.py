@@ -1,13 +1,13 @@
 import xgboost as xgb
 import numpy as np
 import pandas as pd
-from sklearn.metrics import accuracy_score, precision_score
+from sklearn.metrics import accuracy_score, precision_score, f1_score, make_scorer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 from imblearn.over_sampling import SMOTE
 
-data = pd.read_csv('Dataset-Processed_Filled.csv')
+data = pd.read_csv('Dataset-Processed_Filled_2.csv')
 
 # Split data into features (X) and target (y)
 X = data.drop('ExpiredHospital', axis=1)
@@ -29,16 +29,19 @@ clf = xgb.XGBClassifier()
 
 # 2. Define the hyperparameter grid to search
 param_grid = {
-    'max_depth': [3, 4, 5],
-    'learning_rate': [0.01, 0.05, 0.1, 0.3],
-    'n_estimators': [50, 100, 150],
-    'gamma': [0, 0.1, 0.2],
-    'subsample': [0.8, 0.9, 1],
-    'colsample_bytree': [0.8, 0.9, 1]
+    'colsample_bytree': [0.5, 0.7, 0.9],
+    'gamma': [0.0, 0.1, 0.2, 0.3],
+    'learning_rate': [0.01, 0.05, 0.1, 0.2, 0.3],
+    'max_depth': [3, 4, 5, 6, 7],
+    'n_estimators': [100, 150, 200, 250],
+    'subsample': [0.6, 0.8, 1.0],
+    'min_child_weight': [1, 3, 5],
 }
 
+f1_scorer = make_scorer(f1_score)
+
 # 3. Set up the grid search
-grid_clf = GridSearchCV(clf, param_grid, cv=3, scoring='precision', n_jobs=-1, verbose=2)
+grid_clf = GridSearchCV(clf, param_grid, cv=3, scoring=f1_scorer, n_jobs=-1, verbose=2)
 
 # 4. Train the models with different hyperparameters
 grid_clf.fit(X_train_scaled, y_resampled)

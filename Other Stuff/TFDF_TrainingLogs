@@ -1,0 +1,26 @@
+Training logs:
+Number of iteration to final model: 164
+	Iter:1 train-loss:0.581944 valid-loss:0.571279  train-accuracy:0.898883 valid-accuracy:0.902785
+	Iter:2 train-loss:0.543457 valid-loss:0.535591  train-accuracy:0.898883 valid-accuracy:0.902785
+	Iter:3 train-loss:0.515064 valid-loss:0.511057  train-accuracy:0.898883 valid-accuracy:0.902785
+	Iter:4 train-loss:0.493216 valid-loss:0.491866  train-accuracy:0.898883 valid-accuracy:0.902785
+	Iter:5 train-loss:0.474767 valid-loss:0.474844  train-accuracy:0.898971 valid-accuracy:0.902785
+	Iter:6 train-loss:0.459107 valid-loss:0.460883  train-accuracy:0.916907 valid-accuracy:0.918854
+	Iter:16 train-loss:0.372720 valid-loss:0.386646  train-accuracy:0.940223 valid-accuracy:0.936529
+	Iter:26 train-loss:0.335039 valid-loss:0.356573  train-accuracy:0.945428 valid-accuracy:0.938404
+	Iter:36 train-loss:0.309361 valid-loss:0.344219  train-accuracy:0.948574 valid-accuracy:0.939475
+	Iter:46 train-loss:0.289194 valid-loss:0.333408  train-accuracy:0.950838 valid-accuracy:0.939475
+	Iter:56 train-loss:0.274230 valid-loss:0.328588  train-accuracy:0.952984 valid-accuracy:0.940011
+	Iter:66 train-loss:0.260876 valid-loss:0.324024  train-accuracy:0.955660 valid-accuracy:0.940279
+	Iter:76 train-loss:0.248728 valid-loss:0.320822  train-accuracy:0.957601 valid-accuracy:0.940546
+	Iter:86 train-loss:0.238077 valid-loss:0.317697  train-accuracy:0.959394 valid-accuracy:0.941350
+	Iter:96 train-loss:0.229957 valid-loss:0.315884  train-accuracy:0.960717 valid-accuracy:0.941350
+	Iter:106 train-loss:0.222132 valid-loss:0.314568  train-accuracy:0.962188 valid-accuracy:0.942153
+	Iter:116 train-loss:0.214253 valid-loss:0.313639  train-accuracy:0.963481 valid-accuracy:0.942957
+	Iter:126 train-loss:0.207119 valid-loss:0.312346  train-accuracy:0.964922 valid-accuracy:0.942689
+	Iter:136 train-loss:0.200430 valid-loss:0.312221  train-accuracy:0.966686 valid-accuracy:0.942153
+	Iter:146 train-loss:0.194252 valid-loss:0.312392  train-accuracy:0.967774 valid-accuracy:0.942421
+	Iter:156 train-loss:0.187571 valid-loss:0.311785  train-accuracy:0.969127 valid-accuracy:0.943492
+	Iter:166 train-loss:0.181451 valid-loss:0.310596  train-accuracy:0.970391 valid-accuracy:0.943224
+	Iter:176 train-loss:0.176090 valid-loss:0.312001  train-accuracy:0.971655 valid-accuracy:0.942957
+	Iter:186 train-loss:0.170421 valid-loss:0.312127  train-accuracy:0.973067 valid-accuracy:0.943224
